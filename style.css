@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Alatsi&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive,sans-serif;
+}
+
+
+.header {
+    background: pink;
+    height: 150px;
+    text-align: center;
+    padding-top: 50px;
+    position: relative;
+}
+
+#title {
+    font-size: 35px;
+    font-family: Alatsi,sans-serif;
+}
+
+.login {
+    position: absolute;
+    right: 500px;
+    top: 135px;
+}
+.password {
+    position: absolute;
+    left: 500px;
+    top: 135px;
+}
+
