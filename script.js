@@ -28,7 +28,7 @@ function wins(userChoice,cChoice){
     const sLcomp = "COM".fontsize(3).sub();
     result.innerHTML = convert(userChoice) + sLuser + " Beats " + convert(cChoice) + sLcomp + ". You Win!";
     document.getElementById(userChoice).classList.add("green_glow");
-    setTimeout(function() {document.getElementById(userChoice).classList.remove("green_glow")},300)
+    setTimeout(function() {document.getElementById(userChoice).classList.remove("green_glow")},300);
 }
 
 function lose(userChoice,cChoice){
@@ -39,7 +39,7 @@ function lose(userChoice,cChoice){
     const sLcomp = "COM".fontsize(3).sub();
     result.innerHTML = convert(cChoice) + sLcomp + " Beats " + convert(userChoice) + sLuser + ". You lose!";
     document.getElementById(userChoice).classList.add("red_glow");
-    setTimeout(function() {document.getElementById(userChoice).classList.remove("red_glow")},300)
+    setTimeout(function() {document.getElementById(userChoice).classList.remove("red_glow")},300);
 }
 
 function draw(userChoice,cChoice){
@@ -49,7 +49,7 @@ function draw(userChoice,cChoice){
     const sLcomp = "COM".fontsize(3).sub();
     result.innerHTML = convert(userChoice) + sLuser + " vs. " + convert(cChoice) + sLcomp + " is a DRAW!";
     document.getElementById(userChoice).classList.add("gray_glow");
-    setTimeout(function() {document.getElementById(userChoice).classList.remove("gray_glow")},300)
+    setTimeout(function() {document.getElementById(userChoice).classList.remove("gray_glow")},300);
 
 }
 function game(userChoice){
