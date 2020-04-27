@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Facebook - Log In or Sign Up</title>
+    <title>Rock Paper Scissors: The Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <header id="title">OPSOLUM</header>
-        <div class="login-block">
-            <div class="login">
-                <label>Email or Phone</label>
-                <input type="text" name= "email">
-            </div>
-            <div class="password">
-                    <label>Password</label>
-                    <input type="text" name= "email">
-                </div>
-        </div>
-    </div>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
 
+    <div class="scoreBoard">
+        <div id="user" class="badge">user</div>
+        <div id="comp" class="badge">comp</div>
+        <span id="uScore">0</span>:<span id="cScore">0</span>
+    </div>
+  
+
+    <div class="result">
+        <p>Papers covers rock. You win!</p>
+    </div>
+    <div class="choices">
+
+        <img class="choice" id="r" src="rock.png" alt="rock">
+        <img class="choice" id="p" src="paper.png" alt="paper">
+        <img class="choice" id="s" src="scissors.png" alt="scissors">
+
+    </div>
+    <p id="actionMessage">Make your move.</p>
 
 
 </body>
