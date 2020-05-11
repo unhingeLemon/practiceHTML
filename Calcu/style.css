@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+#box{
+    border: 2px solid #49768b;
+    padding: 20px 20px;
+    position: relative;
+    border-radius: 4px;
+}
+#badge{
+    position: absolute;
+    background-color: green;
+    text-align: center;
+    width: 130px;
+    left: 30%;
+    top: -3%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #091921;
+}
+
+.calculator {
+    position: relative;
+    display: grid;
+}
+
+.calculator .value {
+    grid-column: span 4;
+    height: 100px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+
+}
+
+.calculator span {
+    display: grid;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    background: #0c2835;
+    place-items: center;
+    border: 1px solid rgba(0,0,0.1);
+
+}
+
+.calculator span:active{
+
+    background: rgb(155, 150, 89);
+}
+
+.calculator span.clear{
+    grid-column: span 2;
+    width: 120px;
+    background: #ff3077;
+}
+
+
+.calculator span.plus{
+    grid-row: span 2;
+    height: 120px;
+}
+
+
+.calculator span.equal{
+    background: #03b1ff;
+}
+
+.num{
+    border-radius: 50px;
+}
+
+.num:hover{
+    background-color: #734797;
+    transition: all .4s ease;
+}
