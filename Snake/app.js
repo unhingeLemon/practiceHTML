@@ -24,7 +24,7 @@ function drawApple(x,y){
 }
 
 function getRandomInt() {
-    return Math.floor(Math.random() * Math.floor(25));
+    return Math.floor(Math.random() * Math.floor(24) + 1);
 }
 
 let snake = [];
@@ -66,7 +66,7 @@ function getDir(e){
 function loop() {
 
     requestAnimationFrame(loop);
-    if (++count < 5) {
+    if (++count < 4) {
         return;
     }
 

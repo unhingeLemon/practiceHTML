@@ -5,34 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
     <style>
+        * {
+            background-color: blanchedalmond;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 10px;
+        }
+        #canvas{
+            border: 2px solid black;
+            border-radius: 3px;
+        }
+        .a{
+            position: absolute;
+            left:380px;
+            top:10px;
+        }
 
-    body{
-        background-color: black;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        
-    }
-    header{
-        color: white;
-        padding-right: 30px;
-    }
-    p{
-        color: white;
-        padding-left: 30px;
-    }
-    span{
-        color: white;
-    }
-    #canvas{
-        border: 1px solid white;
-    }
     </style>
 </head>
 <body>
-    <header>SNAKE GAME</header>
-    <canvas id="canvas" width="500" height="500"></canvas>
-    <p>SCORE:  </p><span id="score">0</span>
+    <div class="v">
+        <header id="heads">SNAKE GAME</header>
+        <div class="a">
+            <span id="b">SCORE: </span><span id="score">0</span>
+        </div>
+        <canvas id="canvas" width="500" height="500"></canvas>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
