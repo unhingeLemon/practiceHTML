@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
     <style>
+
     body{
         background-color: black;
         align-items: center;
         justify-content: center;
         display: flex;
+        
+    }
+    header{
+        color: white;
+        padding-right: 30px;
+    }
+    p{
+        color: white;
+        padding-left: 30px;
+    }
+    span{
+        color: white;
     }
     #canvas{
         border: 1px solid white;
@@ -19,6 +32,7 @@
 <body>
     <header>SNAKE GAME</header>
     <canvas id="canvas" width="500" height="500"></canvas>
+    <p>SCORE:  </p><span id="score">0</span>
     <script src="app.js"></script>
 </body>
 </html>
