@@ -3,25 +3,28 @@ const cnv = canv.getContext('2d');
 var scoreS = document.getElementById('score');
 console.log("asda");
 
-let box = 20;
-var initSize = 4;
+let box = 20; // to make 25x25 grid
+var initSize = 4; 
 let canvH = 500;
 let canvW = 500;
 let direction = "r";
 score = 0;
+
+
 function drawSnake(x,y){
-    cnv.fillStyle = "blue";
+    cnv.fillStyle = "#303960";
     cnv.fillRect(x*box,y*box,box,box);
-    cnv.fillStyle = "white";
+    cnv.fillStyle = "black";
     cnv.strokeRect(x*box,y*box,box,box);
 }
 
 function drawApple(x,y){
-    cnv.fillStyle = "red";
+    cnv.fillStyle = "#f8b24f";
     cnv.fillRect(x*box,y*box,box,box);
-    cnv.fillStyle = "white";
+    cnv.fillStyle = "black";
     cnv.strokeRect(x*box,y*box,box,box);
 }
+
 
 function getRandomInt() {
     return Math.floor(Math.random() * Math.floor(24) + 1);
@@ -46,7 +49,6 @@ for(var i = initSize-1; i >= 0;i--){
 
 count = 0;
 
-document.addEventListener("keydown", getDir);
 
 function getDir(e){
     if (e.which == 37 && direction != "r"){
@@ -62,7 +64,7 @@ function getDir(e){
 
 
 
-
+// main game
 function loop() {
 
     requestAnimationFrame(loop);
@@ -94,7 +96,7 @@ function loop() {
             break;
     }
 
-
+    // replace the curr head to a new one
     var newHead = {
         x: hSnakeX,
         y: hSnakeY
@@ -117,7 +119,7 @@ function loop() {
     }
    
 
-
+    
     // if snake ate apple
     if(apple.x == snake[0].x && apple.y == snake[0].y){
         snake.unshift(newHead);
@@ -134,6 +136,7 @@ function loop() {
 
     scoreS.innerHTML = score;
 
+    // will draw the snake in x y pos
     for(var i = 0; i < snake.length;i++){
         //warp hor
         if (snake[i].x < 0) {
@@ -160,6 +163,7 @@ function loop() {
  
 
     
+    document.addEventListener("keydown", getDir);
 }
 
 requestAnimationFrame(loop);
